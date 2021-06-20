@@ -10,11 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    
+    @IBAction func loginTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "abc1", sender: nil)
     }
-
-
+    
+    
+    @IBAction func signInTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "abc2", sender: nil)
+    }
+    
+    @IBOutlet weak var loginTap: UIButton!
+    @IBOutlet weak var SignInTap: UIButton!
+    
+    
+    
+    override func viewDidLoad() {
+           super.viewDidLoad()
+           // Do any additional setup after loading the view.
+        Utilities.styleFilledButton(loginTap)
+        Utilities.styleFilledButton(SignInTap)
+        
 }
 
+}
